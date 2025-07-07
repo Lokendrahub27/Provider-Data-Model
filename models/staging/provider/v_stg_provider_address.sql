@@ -12,6 +12,10 @@ derived_columns:
 hashed_columns:
   ADDRESS_HK: "ADDRESS_ID"
   PROVIDER_HK: "PROVIDER_ID"
+  PROVIDER_ADDRESS_LINK_HK:
+    columns:
+      - "PROVIDER_ID"
+      - "ADDRESS_ID"
   ADDRESS_HASHDIFF:
     is_hashdiff: true
     columns:

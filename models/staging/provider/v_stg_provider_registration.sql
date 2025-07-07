@@ -12,6 +12,9 @@ derived_columns:
 hashed_columns:
   PROVIDER_HK: "PROVIDER_ID"
   REGISTRATION_HK: "REGISTRATION_ID"
+  PROVIDER_REGISTRATION_LINK_HK:
+    - PROVIDER_ID
+    - REGISTRATION_ID
   PROVIDER_REGISTRATION_HASHDIFF:
     is_hashdiff: true
     columns:

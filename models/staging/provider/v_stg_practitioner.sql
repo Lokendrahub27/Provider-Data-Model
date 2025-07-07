@@ -12,6 +12,9 @@ derived_columns:
 hashed_columns:
   PRACTITIONER_HK: "PRACTITIONER_ID"
   PROVIDER_HK: "PROVIDER_ID"
+  PROVIDER_PRACTITIONER_LINK_HK:
+    - PROVIDER_ID
+    - PRACTITIONER_ID
   PRACTITIONER_HASHDIFF:
     is_hashdiff: true
     columns:
