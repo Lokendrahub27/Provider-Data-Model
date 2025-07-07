@@ -1,0 +1,1 @@
+SELECT * FROM  {{ source('raw', 'provider_address') }}

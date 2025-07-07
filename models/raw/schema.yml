@@ -1,0 +1,92 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: DV_MODELS
+    tables:
+      - name: raw_provider
+        description: "Core provider entity"
+        columns:
+          - name: provider_id
+            description: "Primary key"
+          - name: provider_name
+          - name: provider_type
+          - name: phone_number
+          - name: address
+          - name: updated_at
+
+      - name: provider_registration
+        description: "Provider registration details"
+        columns:
+          - name: registration_id
+          - name: provider_id
+          - name: registration_number
+          - name: registration_date
+
+      - name: tax_info
+        description: "Tax information related to the provider"
+        columns:
+          - name: tax_id
+          - name: provider_id
+          - name: tax_type
+          - name: tax_number
+
+      - name: practitioner
+        description: "Practitioner working under provider"
+        columns:
+          - name: practitioner_id
+          - name: provider_id
+          - name: practitioner_name
+          - name: specialty
+
+      - name: provider_address
+        description: "Detailed address of the provider"
+        columns:
+          - name: address_id
+          - name: provider_id
+          - name: street
+          - name: city
+          - name: state
+          - name: zip_code
+
+      - name: provider_relational
+        description: "Relationships of provider with other entities"
+        columns:
+          - name: relation_id
+          - name: provider_id
+          - name: relation_type
+
+      - name: provider_network_relational
+        description: "Mapping between provider and network"
+        columns:
+          - name: id
+          - name: provider_id
+          - name: network_id
+
+      - name: network
+        description: "Network to which providers belong"
+        columns:
+          - name: network_id
+          - name: network_name
+          - name: network_type
+
+      - name: network_area
+        description: "Area information related to network"
+        columns:
+          - name: area_id
+          - name: network_id
+          - name: area_name
+
+      - name: network_set
+        description: "Group of networks"
+        columns:
+          - name: set_id
+          - name: network_id
+          - name: set_name
+
+      - name: pharmacy
+        description: "Pharmacy connected to providers"
+        columns:
+          - name: pharmacy_id
+          - name: provider_id
+          - name: pharmacy_name

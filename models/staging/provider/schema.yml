@@ -1,0 +1,84 @@
+version: 2
+
+models:
+  - name: v_stg_provider
+    description: Staging model for provider entity
+    columns:
+      - name: PROVIDER_HK
+        description: Hash key for provider
+      - name: PROVIDER_HASHDIFF
+        description: Hashdiff for provider
+
+  - name: v_stg_provider_address
+    description: Staging model for provider address
+    columns:
+      - name: ADDRESS_HK
+        description: Hash key for address
+      - name: PROVIDER_HK
+        description: Hash key for provider
+      - name: ADDRESS_HASHDIFF
+        description: Hashdiff for address
+
+  - name: v_stg_provider_registration
+    description: Staging model for provider registration
+    columns:
+      - name: REGISTRATION_HK
+        description: Hash key for registration
+      - name: PROVIDER_HK
+        description: Hash key for provider
+      - name: REGISTRATION_HASHDIFF
+        description: Hashdiff for registration
+
+  - name: v_stg_provider_relational
+    description: Staging model for provider relational entity
+    columns:
+      - name: RELATION_HK
+        description: Hash key for relation
+      - name: PROVIDER_HK
+        description: Hash key for provider
+      - name: RELATION_HASHDIFF
+        description: Hashdiff for relation
+
+  - name: v_stg_provider_network_relational
+    description: Staging model for provider-network relationship
+    columns:
+      - name: RELATION_HK
+        description: Hash key for relation
+      - name: PROVIDER_HK
+        description: Hash key for provider
+      - name: NETWORK_HK
+        description: Hash key for network
+      - name: RELATION_HASHDIFF
+        description: Hashdiff for network relation
+
+  - name: v_stg_tax_info
+    description: Staging model for tax information
+    columns:
+      - name: TAX_HK
+        description: Hash key for tax info
+      - name: PROVIDER_HK
+        description: Hash key for provider
+      - name: TAX_HASHDIFF
+        description: Hashdiff for tax info
+
+  - name: v_stg_practitioner
+    description: Staging model for practitioner entity
+    columns:
+      - name: PRACTITIONER_HK
+        description: Hash key for practitioner
+      - name: PROVIDER_HK
+        description: Hash key for provider
+      - name: PRACTITIONER_HASHDIFF
+        description: Hashdiff for practitioner
+
+  - name: v_stg_pharmacy
+    description: Staging model for pharmacy entity
+    columns:
+      - name: PHARMACY_HK
+        description: Hash key for pharmacy
+      - name: PROVIDER_HK
+        description: Hash key for provider
+      - name: LICENSE_HK
+        description: Hash key for license
+      - name: PHARMACY_HASHDIFF
+        description: Hashdiff for pharmacy
