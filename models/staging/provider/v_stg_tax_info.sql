@@ -12,6 +12,9 @@ derived_columns:
 hashed_columns:
   TAX_HK: "TAX_ID"
   PROVIDER_HK: "PROVIDER_ID"
+  PROVIDER_TAX_ENTITY_LINK_HK:
+    - "PROVIDER_ID"
+    - "TAX_ID"
   TAX_HASHDIFF:
     is_hashdiff: true
     columns:
